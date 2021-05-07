@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Movie Nominations</h1>
-      
+      <Search />
     </div>
   );
 }
