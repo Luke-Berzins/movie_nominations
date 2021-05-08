@@ -34,7 +34,7 @@ Create shareable links
 
 # Pseudocode
 
-1. Create a form that stores values. ❌
+1. Create a form that stores values. ✅
 
 2. Use the values to make a request to the OMBD API ❌
 
