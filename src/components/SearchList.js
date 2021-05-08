@@ -10,6 +10,7 @@ export default function SearchList(props) {
                 key={index}
                 title={searchItem.Title}
                 year={searchItem.Year}
+                setNominationsList={props.setNominationsList}
         />
     })
 }

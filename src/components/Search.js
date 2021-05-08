@@ -43,6 +43,7 @@ export default function Search(props) {
             <p>Search results for "{input}"</p>
                 <SearchList 
                 searchResults={searchResults}
+                setNominationsList={props.setNominationsList}
                 />
             
             
