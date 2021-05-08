@@ -10,11 +10,11 @@
 
 # Requirements
 
-1. Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx). ❌
+1. Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).  ✅
 
-2. Each search result should list at least its title, year of release and a button to nominate that film. ❌
+2. Each search result should list at least its title, year of release and a button to nominate that film.  ✅
 
-3. Updates to the search terms should update the result list ❌
+3. Updates to the search terms should update the result list  ✅
 
 4. Movies in search results can be added and removed from the nomination list. ❌
 
@@ -36,9 +36,9 @@ Create shareable links
 
 1. Create a form that stores values. ✅
 
-2. Use the values to make a request to the OMBD API ❌
+2. Use the values to make a request to the OMBD API  ✅
 
-3. Display results in a user friendly manner ❌ 
+3. Display results in a user friendly manner  ✅
 
 4. Allow user to select nominations, dissallow multiple selections of the same film ❌
 
