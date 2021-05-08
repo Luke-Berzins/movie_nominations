@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import SearchList from './SearchList'
 
 
 export default function Search(props) {
     const [submitting, setSubmitting] = useState(false)
     const [input, setInput] = useState("")
-    const [searchResults, setSearchResults] = useState({})
+    const [searchResults, setSearchResults] = useState()
     
     
     const handleSubmit = e => {
         e.preventDefault()
         setSubmitting(true)
-        setTimeout(() => {
-            setSubmitting(false)
-        }, 2000)
-        axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&t=hi`)
+        axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&s=${input}`)
         .then((response) => {
-            console.log(response.data)
+            console.log("response", response.data)
             const { data } = response
-            setSearchResults(data.Title)
+            setSubmitting(false)
+            setSearchResults(data.Search)
             console.log(searchResults)
         },
         (error) => {
@@ -34,13 +33,20 @@ export default function Search(props) {
         <div>
             <div>
             {submitting && <div>...Submitting!</div>}
-            {searchResults && <div>{searchResults}</div>}
-            <p>{input}</p>
             </div>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="title" value={input.title} onChange={handleInput} />
                 <button>Search!</button>
             </form>
+
+            {searchResults && <div>
+            <p>Search results for "{input}"</p>
+                <SearchList 
+                searchResults={searchResults}
+                />
+            
+            
+            </div>}
         </div>
     )
 }
