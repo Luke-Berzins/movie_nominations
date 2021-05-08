@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 export default function Search(props) {
     const [submitting, setSubmitting] = useState(false)
-    const [state, setState] = useState("hi")
+    const [input, setInput] = useState("")
     
     const handleSubmit = e => {
         e.preventDefault()
@@ -13,16 +13,19 @@ export default function Search(props) {
         }, 2000)
     }
     
-    
+    const handleInput = e => {
+        console.log(e)
+        setInput(() => (e.target.value))
+    }
     
     return (
         <div>
             <div>
             {submitting && <div>...Submitting!</div>}
-            <p>{state}</p>
+            <p>{input}</p>
             </div>
             <form onSubmit={handleSubmit}>
-                <input></input>
+                <input type="text" name="title" value={input.title} onChange={handleInput} />
                 <button>Search!</button>
             </form>
         </div>

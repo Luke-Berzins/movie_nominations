@@ -4,7 +4,7 @@ import Search from './components/Search'
 function App() {
   return (
     <div className="App">
-      <h1>Movie Nominations</h1>
+      <h1>🎥 Da Shoppies 🎥</h1>
       <Search />
     </div>
   );
