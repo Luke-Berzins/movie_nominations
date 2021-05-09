@@ -18,7 +18,8 @@ function App() {
     <div className="App">
       <h1>🎥 The Shoppies 🎥</h1>
       <Search 
-      setNominations={setNominationList}
+      setNominationList={setNominationList}
+      nominationList={nominationList}
       />
       <NominationList 
       nominationList={nominationList}
