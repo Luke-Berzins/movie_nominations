@@ -46,7 +46,7 @@ export default function Search(props) {
         <section>
             <p>Movie Title</p>
             <div>
-            {submitting && <p>...Submitting!</p>}
+            {submitting && <img alt="loading" src="./reel.svg" />}
             {error && <p>{error}</p>}
             </div>
             <form onSubmit={handleSubmit}>
