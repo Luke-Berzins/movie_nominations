@@ -1,13 +1,15 @@
 import React from 'react'
-
+import "./styles/SearchBar.css"
 
 export default function SearchBar(props) {
 
     return (
         <div>
+            <div className="searchHeading">
             <p>Movie Title</p>
+            {props.submitting && <img alt="loading" src="./reel.svg" className="searchHeading__img--spinner"/>}
+            </div>
             <div>
-            {props.submitting && <img alt="loading" src="./reel.svg" />}
             {props.error && <p>{props.error}</p>}
             </div>
             <form onSubmit={props.handleSubmit}>

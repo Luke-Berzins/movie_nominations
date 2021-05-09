@@ -1,5 +1,5 @@
 import React from 'react'
-import './NominationList.css'
+import './styles/NominationList.css'
 import NominationListItem from './NominationListItem'
 
 export default function NominationList(props) {
