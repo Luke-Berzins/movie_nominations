@@ -12,11 +12,11 @@ export default function SearchItem(props) {
 
 
     return (
-        <div>
+        <li>
             {props.title} ({props.year})
             {!nominated && <button onClick={() => handleNominate(nominated, { [props.title] : props.year})}>
                 Nominate!</button>}
-        </div>
+        </li>
 
     )
 }

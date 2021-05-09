@@ -9,13 +9,12 @@ export default function NominationListItem(props) {
     }
 
     return (
-        <div>
-            <div>
+        <li>
             <p>
             {props.title} ({props.year})
             </p>    
             <button onClick={() => handleCancel(props.title)}>Cancel</button>
-            </div>
-        </div>
+        </li>
+        
     )
 }

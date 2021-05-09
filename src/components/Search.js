@@ -43,7 +43,7 @@ export default function Search(props) {
     }
     
     return (
-        <div>
+        <section>
             <div>
             {submitting && <div>...Submitting!</div>}
             {error && <div>{error}</div>}
@@ -55,14 +55,14 @@ export default function Search(props) {
 
             {searchResults && <div>
             <p>Search results for "{input}"</p>
+                <ul>
                 <SearchList 
                 searchResults={searchResults}
                 setNominationList={props.setNominationList}
                 nominationList={props.nominationList}
                 />
-            
-            
+                </ul>
             </div>}
-        </div>
+        </section>
     )
 }
