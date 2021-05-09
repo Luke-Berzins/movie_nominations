@@ -3,6 +3,16 @@
   width: 100vw;
   max-width: 100%;
   background-color: rgb(163, 212, 214);
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+.displayLists {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
 }
 
 .pageTitle {

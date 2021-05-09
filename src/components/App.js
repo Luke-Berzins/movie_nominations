@@ -13,14 +13,16 @@ function App() {
       <h1 className="pageTitle">🎥 The Shoppies 🎥</h1>
       {Object.keys(nominationList).length === 5 && 
         <span className="banner">Thank you for your selections!</span>}
-        <SearchDisplay 
-        nominationList={nominationList}
-        setNominationList={setNominationList}
-        />
-        <NominationDisplay
-        nominationList={nominationList}
-        setNominationList={setNominationList}
-        />
+        <div className="displayLists">
+          <SearchDisplay 
+          nominationList={nominationList}
+          setNominationList={setNominationList}
+          />
+          <NominationDisplay
+          nominationList={nominationList}
+          setNominationList={setNominationList}
+          />
+        </div>
     </div>
   );
 }
