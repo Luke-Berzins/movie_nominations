@@ -13,7 +13,6 @@ export default function NominationList(props) {
                 title={nominatedMovie}
                 year={props.nominationList[nominatedMovie]}
                 setNominationList={props.setNominationList}
-                nominationList={props.nominationList}
             />
         })
     )
