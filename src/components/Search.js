@@ -45,8 +45,8 @@ export default function Search(props) {
     return (
         <section>
             <div>
-            {submitting && <div>...Submitting!</div>}
-            {error && <div>{error}</div>}
+            {submitting && <p>...Submitting!</p>}
+            {error && <p>{error}</p>}
             </div>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="title" value={input.title} onChange={handleInput} />

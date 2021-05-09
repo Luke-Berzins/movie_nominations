@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
-import Search from './components/Search'
-import NominationDisplay from './components/NominationDisplay'
+import Search from './Search'
+import NominationDisplay from './NominationDisplay'
 
 function App() {
   const [nominationList, setNominationList] = useState({})
