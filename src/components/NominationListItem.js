@@ -15,6 +15,7 @@ export default function NominationListItem(props) {
             {props.title} ({props.year})    
             <button 
                 type="button"
+                aria-label="Un-nominate this movie"
                 onClick={() => handleCancel(props.id)}>
                 Cancel
             </button>

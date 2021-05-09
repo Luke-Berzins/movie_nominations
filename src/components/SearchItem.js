@@ -15,6 +15,7 @@ export default function SearchItem(props) {
             { 
             <button 
                 type="button"
+                aria-label="Nominate this movie"
                 disabled={(props.id in props.nominationList) || 
                     Object.keys(props.nominationList).length === 5}
                 onClick={() => handleNominate({ 

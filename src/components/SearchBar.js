@@ -14,7 +14,8 @@ export default function SearchBar(props) {
             </div>
             <form onSubmit={props.handleSubmit}>
                 <input 
-                type="text" 
+                type="search"
+                aria-label="search for movies to nominate"
                 name="title" 
                 value={props.input.title} 
                 onChange={props.handleInput} />
