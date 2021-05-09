@@ -44,6 +44,7 @@ export default function Search(props) {
     
     return (
         <section>
+            <h2>Search</h2>
             <div>
             {submitting && <p>...Submitting!</p>}
             {error && <p>{error}</p>}
