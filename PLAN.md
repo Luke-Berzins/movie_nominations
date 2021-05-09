@@ -16,11 +16,11 @@
 
 3. Updates to the search terms should update the result list  ✅
 
-4. Movies in search results can be added and removed from the nomination list. ❌
+4. Movies in search results can be added and removed from the nomination list.  ✅
 
-5. If a search result has already been nominated, disable its nominate button. ❌
+5. If a search result has already been nominated, disable its nominate button.  ✅
 
-6. Display a banner when the user has 5 nominations. ❌
+6. Display a banner when the user has 5 nominations.  ✅
 
 # Extras
 
@@ -28,7 +28,11 @@ Nicer design, or improve the app by adding new features! Choose something that y
 
 Save nomination lists if the user leaves the page
 
-Animations for loading, adding/deleting movies, notifications
+Animations for loading
+
+adding/deleting movies, 
+
+notifications
 
 Create shareable links
 
@@ -40,13 +44,13 @@ Create shareable links
 
 3. Display results in a user friendly manner  ✅
 
-4. Allow user to select nominations, dissallow multiple selections of the same film ❌
+4. Allow user to select nominations, dissallow multiple selections of the same film ✅
 
-5. Display a banner when five nominations have been completed ❌ 
+5. Display a banner when five nominations have been completed ✅
 
-6. Make it look nice ❌
+6. Make it look nice ✅
 
-7. Extra fun stuff :) ❌
+7. Extra fun stuff :) ✅
 
 # Components
 

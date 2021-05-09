@@ -44,7 +44,7 @@ export default function Search(props) {
     
     return (
         <section>
-            <h2>Search</h2>
+            <p>Movie Title</p>
             <div>
             {submitting && <p>...Submitting!</p>}
             {error && <p>{error}</p>}
@@ -61,7 +61,7 @@ export default function Search(props) {
             </form>
 
             {searchResults && <div>
-            <p>Search results for "{input}"</p>
+            <h4>Search results for "{input}"</h4>
                 <ul>
                 <SearchList 
                 searchResults={searchResults}
