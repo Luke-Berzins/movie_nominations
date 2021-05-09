@@ -8,10 +8,12 @@ export default function NominationList(props) {
 
     return (
         Object.keys(props.nominationList).map((nominatedMovie, index) => {
+            
             return <NominationListItem
                 key={index}
-                title={nominatedMovie}
-                year={props.nominationList[nominatedMovie]}
+                id={nominatedMovie}
+                title={props.nominationList[nominatedMovie].title}
+                year={props.nominationList[nominatedMovie].year}
                 setNominationList={props.setNominationList}
                 nominationList={props.nominationList}
             />

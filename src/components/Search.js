@@ -18,7 +18,7 @@ export default function Search(props) {
         }
         setSubmitting(true)
         setError('')
-        axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&s=${input}&type=movie`)
+        axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&s=${input}&type=movie&page=1`)
         .then((response) => {
             setSubmitting(false)
             console.log("response", response.data)

@@ -9,11 +9,12 @@ export default function SearchList(props) {
         
         return <SearchItem 
                 key={index}
+                id={searchItem.imdbID}
                 title={searchItem.Title}
                 year={searchItem.Year}
                 setNominationList={props.setNominationList}
                 nominationList={props.nominationList}
-                
+
         />
     })
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function NominationListItem(props) {
     
-
+    console.log("props", props)
    
     const handleCancel = (cancelled) => {
         const {[cancelled] : value, ...newNominations} = props.nominationList
@@ -12,10 +12,11 @@ export default function NominationListItem(props) {
 
     return (
         <li>
-            <p>
-            {props.title} ({props.year})
-            </p>    
-            <button onClick={() => handleCancel(props.title)}>Cancel</button>
+            {props.title} ({props.year})    
+            <button onClick={
+                () => handleCancel(props.id)}>
+                Cancel
+            </button>
         </li>
         
     )
