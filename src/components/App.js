@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './styles/App.css';
-import Search from './SearchDisplay'
+import SearchDisplay from './SearchDisplay'
 import NominationDisplay from './NominationDisplay'
 
 function App() {
@@ -11,16 +11,16 @@ function App() {
   return (
     <div className="App">
       <h1>🎥 The Shoppies 🎥</h1>
-      <div className="temp">
-        <Search 
-        setNominationList={setNominationList}
+      {Object.keys(nominationList).length === 5 && 
+        <span>Thank you for your selections!</span>}
+        <SearchDisplay 
         nominationList={nominationList}
+        setNominationList={setNominationList}
         />
         <NominationDisplay
         nominationList={nominationList}
         setNominationList={setNominationList}
         />
-      </div>
     </div>
   );
 }
