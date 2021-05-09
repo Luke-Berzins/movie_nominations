@@ -10,9 +10,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>🎥 The Shoppies 🎥</h1>
+      <h1 className="pageTitle">🎥 The Shoppies 🎥</h1>
       {Object.keys(nominationList).length === 5 && 
-        <span>Thank you for your selections!</span>}
+        <span className="banner">Thank you for your selections!</span>}
         <SearchDisplay 
         nominationList={nominationList}
         setNominationList={setNominationList}

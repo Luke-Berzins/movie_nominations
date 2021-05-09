@@ -4,7 +4,7 @@
 
 
 .searchHeading__img--spinner {
-    width: 10%;
+    width: 5%;
     animation: rotation 2s infinite linear;
 }
 
