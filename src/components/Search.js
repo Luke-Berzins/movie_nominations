@@ -4,7 +4,7 @@ import SearchList from './SearchList'
 
 
 export default function Search(props) {
-    const [submitting, setSubmitting] = useState(false)
+    const [submitting, setSubmitting] = useState()
     const [input, setInput] = useState("")
     const [searchResults, setSearchResults] = useState()
     const [error, setError] = useState()

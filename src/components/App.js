@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <h1>🎥 The Shoppies 🎥</h1>
+      <div className="temp">
       <Search 
       setNominationList={setNominationList}
       nominationList={nominationList}
@@ -19,6 +20,7 @@ function App() {
       nominationList={nominationList}
       setNominationList={setNominationList}
       />
+      </div>
     </div>
   );
 }
