@@ -4,8 +4,10 @@ export default function SearchItem(props) {
     const [nominated, setNominated] = useState(false)
 
     const handleNominate = (selected, movieInfo) => {
-        setNominated(!selected)
-        props.setNominationList({...props.nominationList, ...movieInfo})
+        if (Object.keys(props.nominationList).length < 5) {
+            setNominated(!selected)
+            props.setNominationList({...props.nominationList, ...movieInfo})
+        }
     }
 
 
@@ -14,7 +16,6 @@ export default function SearchItem(props) {
             {props.title} ({props.year})
             {!nominated && <button onClick={() => handleNominate(nominated, { [props.title] : props.year})}>
                 Nominate!</button>}
-            {nominated && <div>hellya </div>}
         </div>
 
     )

@@ -12,6 +12,10 @@ export default function Search(props) {
     
     const handleSubmit = e => {
         e.preventDefault()
+        if (!input) {
+            setError("Please enter your favourite movie!")
+            return
+        }
         setSubmitting(true)
         setError('')
         axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&s=${input}&type=movie`)
@@ -20,7 +24,11 @@ export default function Search(props) {
             console.log("response", response.data)
             const { data } = response
             if (data.Response === "False") {
-                setError(data.Error)
+                if (data.Error === "Too many results.") {
+                    setError(data.Error + " Please narrow your search")
+                } else {
+                    setError(data.Error)
+                }
             }
             setSearchResults(data.Search)
             console.log(searchResults)
