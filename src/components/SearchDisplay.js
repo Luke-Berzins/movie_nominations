@@ -21,7 +21,9 @@ export default function Search(props) {
         setError('')
         axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&s=${input}&type=movie&page=1`)
         .then((response) => {
-            setSubmitting(false)
+            setTimeout(() => {
+                setSubmitting(false)
+            }, 1000)
             console.log("response", response.data)
             const { data } = response
             if (data.Response === "False") {

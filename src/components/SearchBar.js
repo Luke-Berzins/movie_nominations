@@ -17,7 +17,7 @@ export default function SearchBar(props) {
                 value={props.input.title} 
                 onChange={props.handleInput} />
                 <button
-                type="button"
+                type="submit"
                 >Search!</button>
             </form>
         </div>
