@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import SearchList from './SearchList'
+import SearchBar from './SearchBar'
 
 
 export default function Search(props) {
+    const [searchResults, setSearchResults] = useState()
     const [submitting, setSubmitting] = useState()
     const [input, setInput] = useState("")
-    const [searchResults, setSearchResults] = useState()
     const [error, setError] = useState()
     
     
@@ -43,22 +44,14 @@ export default function Search(props) {
     }
     
     return (
-        <section>
-            <p>Movie Title</p>
-            <div>
-            {submitting && <img alt="loading" src="./reel.svg" />}
-            {error && <p>{error}</p>}
-            </div>
-            <form onSubmit={handleSubmit}>
-                <input 
-                type="text" 
-                name="title" 
-                value={input.title} 
-                onChange={handleInput} />
-                <button
-                type="button"
-                >Search!</button>
-            </form>
+        <section>    
+           <SearchBar
+                handleInput={handleInput}
+                input={input}
+                handleSubmit={handleSubmit}
+                submitting={submitting}
+                error={error}
+           />
 
             {searchResults && <div>
             <h4>Search results for "{input}"</h4>
