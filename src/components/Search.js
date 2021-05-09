@@ -7,16 +7,21 @@ export default function Search(props) {
     const [submitting, setSubmitting] = useState(false)
     const [input, setInput] = useState("")
     const [searchResults, setSearchResults] = useState()
+    const [error, setError] = useState()
     
     
     const handleSubmit = e => {
         e.preventDefault()
         setSubmitting(true)
-        axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&s=${input}`)
+        setError('')
+        axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f30d2ceb&s=${input}&type=movie`)
         .then((response) => {
+            setSubmitting(false)
             console.log("response", response.data)
             const { data } = response
-            setSubmitting(false)
+            if (data.Response === "False") {
+                setError(data.Error)
+            }
             setSearchResults(data.Search)
             console.log(searchResults)
         },
@@ -33,6 +38,7 @@ export default function Search(props) {
         <div>
             <div>
             {submitting && <div>...Submitting!</div>}
+            {error && <div>{error}</div>}
             </div>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="title" value={input.title} onChange={handleInput} />

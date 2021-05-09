@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
 import './App.css';
 import Search from './components/Search'
-import NominationList from './components/NominationList'
+import NominationDisplay from './components/NominationDisplay'
 
 function App() {
-  const [nominationList, setNominationList] = useState({
-    a: "s",
-    b: "s",
-    c: "s",
-    d: "s",
-    e: "s",
-  })
+  const [nominationList, setNominationList] = useState({})
 
 
 
@@ -21,8 +15,9 @@ function App() {
       setNominationList={setNominationList}
       nominationList={nominationList}
       />
-      <NominationList 
+      <NominationDisplay
       nominationList={nominationList}
+      setNominationList={setNominationList}
       />
     </div>
   );
