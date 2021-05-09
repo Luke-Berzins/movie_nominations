@@ -12,11 +12,14 @@ export default function SearchItem(props) {
     return (
         <li>
             {props.title} ({props.year}) 
-            {!(props.id in props.nominationList) && 
-            Object.keys(props.nominationList).length < 5 && 
-            <button onClick={() => handleNominate({ 
-                "title" : props.title,
-                "year" : props.year})}>
+            { 
+            <button 
+                type="button"
+                disabled={(props.id in props.nominationList) || 
+                    Object.keys(props.nominationList).length === 5}
+                onClick={() => handleNominate({ 
+                    "title" : props.title,
+                    "year" : props.year})}>
                 Nominate!</button>}
         </li>
 

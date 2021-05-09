@@ -50,8 +50,14 @@ export default function Search(props) {
             {error && <p>{error}</p>}
             </div>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="title" value={input.title} onChange={handleInput} />
-                <button>Search!</button>
+                <input 
+                type="text" 
+                name="title" 
+                value={input.title} 
+                onChange={handleInput} />
+                <button
+                type="button"
+                >Search!</button>
             </form>
 
             {searchResults && <div>

@@ -13,8 +13,9 @@ export default function NominationListItem(props) {
     return (
         <li>
             {props.title} ({props.year})    
-            <button onClick={
-                () => handleCancel(props.id)}>
+            <button 
+                type="button"
+                onClick={() => handleCancel(props.id)}>
                 Cancel
             </button>
         </li>
