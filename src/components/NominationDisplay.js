@@ -4,11 +4,9 @@ import './styles/listContainer.css'
 
 export default function NominationDisplay(props) {
 
-
-
     return (
         <section className="listContainer">
-            <h4 className="listContainer__h4"> Nominations</h4>
+            <h4> Nominations</h4>
             <ul>
                 <NominationList 
                     nominationList={props.nominationList}

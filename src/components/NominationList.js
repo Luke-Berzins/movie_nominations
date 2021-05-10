@@ -1,14 +1,10 @@
 import React from 'react'
-
 import NominationListItem from './NominationListItem'
 
 export default function NominationList(props) {
     
-
-
-    return (
-        
-        <section className="nominationList">
+    return ( 
+        <section>
             {Object.keys(props.nominationList).map((nominatedMovie, index) => {
                 return <NominationListItem
                     key={index}

@@ -1,10 +1,8 @@
 import React from 'react'
 import SearchItem from './SearchItem'
 
-
 export default function SearchList(props) {
-    
-    
+
     return props.searchResults.map((searchItem, index) => {
         
         return <SearchItem 
@@ -14,7 +12,6 @@ export default function SearchList(props) {
                 year={searchItem.Year}
                 setNominationList={props.setNominationList}
                 nominationList={props.nominationList}
-
         />
     })
 }

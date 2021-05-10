@@ -2,13 +2,10 @@ import React from 'react'
 
 export default function SearchItem(props) {
 
-
-
     const handleNominate = (movieInfo) => {
         props.setNominationList({...props.nominationList, [props.id] : movieInfo})
     }
-
-    
+   
     return (
         <li>
             {props.title} ({props.year}) 
@@ -23,6 +20,5 @@ export default function SearchItem(props) {
                     "year" : props.year})}>
                 Nominate!</button>}
         </li>
-
     )
 }
