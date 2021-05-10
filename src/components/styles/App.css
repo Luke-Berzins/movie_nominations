@@ -23,8 +23,9 @@
 }
 
 .App__span {
-  background-color: rgba(84, 196, 172, 0.507);
-  width: 100%;
+  background-color: rgba(84, 196, 172, 0.349);
+  width: 90%;
+  border-radius: 1rem;
   text-align: center;
   padding: 1rem;
 }
