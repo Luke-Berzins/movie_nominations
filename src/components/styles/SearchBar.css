@@ -2,12 +2,6 @@
     display: flex;
 }
 
-
-.searchHeading__img--spinner {
-    width: 5%;
-    animation: rotation 2s infinite linear;
-}
-
 @keyframes rotation {
     from {
       transform: rotate(0deg);
@@ -16,3 +10,12 @@
       transform: rotate(359deg);
     }
   }
+
+.searchHeading__h4 {
+    margin-right: 1rem;
+}
+
+.searchHeading__img--spinner {
+    width: 10%;
+    animation: rotation 2s infinite linear;
+}

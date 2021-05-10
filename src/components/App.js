@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <h1 className="App__h1">🎥 The Shoppies 🎥</h1>
       {Object.keys(nominationList).length === 5 && 
-        <span className="App__span">Thank you for your selections!</span>}
-        <div className="App__section">
+        <span className="App__span">Thank you for your selections! 5 is the maximum.</span>}
+        <div className="AppLists">
           <SearchDisplay 
           nominationList={nominationList}
           setNominationList={setNominationList}

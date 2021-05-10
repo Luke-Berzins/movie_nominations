@@ -25,7 +25,7 @@ export default function Search(props) {
         .then((response) => {
             setTimeout(() => {
                 setSubmitting(false)
-            }, 1000)
+            }, 2000)
             console.log("response", response.data)
             const { data } = response
             if (data.Response === "False") {

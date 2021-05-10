@@ -6,7 +6,7 @@ export default function SearchBar(props) {
     return (
         <div>
             <div className="searchHeading">
-            <p>Movie Title</p>
+            <h4 className="searchHeading__h4">Movie Title</h4>
             {props.submitting && <img alt="loading" src="./reel.svg" className="searchHeading__img--spinner"/>}
             </div>
             <div>

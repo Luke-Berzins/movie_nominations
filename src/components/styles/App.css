@@ -14,7 +14,7 @@
   padding-top: 2rem;
 }
 
-.App__section {
+.AppLists {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -22,9 +22,16 @@
   padding: 1rem;
 }
 
+.App__span {
+  background-color: rgba(84, 196, 172, 0.507);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
 @media only screen and (max-width: 600px) {
   .App {
-    height: 100vh;
+    height: 140vh;
     width: 100vw;
     max-width: 100%;
     background-color: rgba(190, 228, 229, 0.548);
@@ -33,10 +40,16 @@
     align-self: start;
   }
   
-  .App__section {
-    width: 100%;
+  .AppLists {
+    width: 99%;
+    max-width: 100%;
+    flex-direction: column-reverse;
     padding: 0;
     margin: 0;
+  }
+
+  .App__span {
+    max-width: 90%;
   }
 
   li {
