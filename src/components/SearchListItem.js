@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SearchItem(props) {
+export default function SearchListItem(props) {
 
     const handleNominate = (movieInfo) => {
         props.setNominationList({...props.nominationList, [props.id] : movieInfo})

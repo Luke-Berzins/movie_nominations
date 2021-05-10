@@ -57,7 +57,7 @@ export default function Search(props) {
            />
 
             {searchResults && <div>
-            <h4 className="listContainer__h4">Search results for "{lastSearch}"</h4>
+            <h4>Search results for "{lastSearch}"</h4>
                 <ul>
                 <SearchList 
                 searchResults={searchResults}

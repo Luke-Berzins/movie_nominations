@@ -6,8 +6,6 @@ import NominationDisplay from './NominationDisplay'
 function App() {
   const [nominationList, setNominationList] = useState({})
 
-
-
   return (
     <div className="App">
       <h1>🎥 The Shoppies 🎥</h1>

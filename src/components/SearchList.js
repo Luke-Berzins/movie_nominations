@@ -1,11 +1,11 @@
 import React from 'react'
-import SearchItem from './SearchItem'
+import SearchListItem from './SearchListItem'
 
 export default function SearchList(props) {
 
     return props.searchResults.map((searchItem, index) => {
         
-        return <SearchItem 
+        return <SearchListItem 
                 key={index}
                 id={searchItem.imdbID}
                 title={searchItem.Title}
