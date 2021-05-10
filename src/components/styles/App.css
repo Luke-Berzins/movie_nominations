@@ -2,20 +2,23 @@
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-  background-color: rgb(163, 212, 214);
+  background-color: rgba(190, 228, 229, 0.548);
   display: flex;
   flex-direction: column;
   
   align-items: center;
 }
 
-.displayLists {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-}
-
-.pageTitle {
+.App__h1 {
   margin-top: 0;
   padding-top: 2rem;
 }
+
+.App__section {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 3rem;
+  padding: 1rem;
+}
+
