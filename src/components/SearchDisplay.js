@@ -26,7 +26,6 @@ export default function Search(props) {
             setTimeout(() => {
                 setSubmitting(false)
             }, 2000)
-            console.log("response", response.data)
             const { data } = response
             if (data.Response === "False") {
                 if (data.Error === "Too many results.") {
