@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import SearchList from './SearchList'
 import SearchBar from './SearchBar'
+import './styles/listContainer.css'
 
 
 export default function Search(props) {
@@ -9,6 +10,7 @@ export default function Search(props) {
     const [submitting, setSubmitting] = useState()
     const [input, setInput] = useState("")
     const [error, setError] = useState()
+    const [lastSearch, setLastSearch] = useState("")
     
     
     const handleSubmit = e => {
@@ -34,7 +36,7 @@ export default function Search(props) {
                 }
             }
             setSearchResults(data.Search)
-            console.log(searchResults)
+            setLastSearch(input)
         },
         (error) => {
             console.log(error)
@@ -46,7 +48,7 @@ export default function Search(props) {
     }
     
     return (
-        <section>    
+        <section className="listContainer">    
            <SearchBar
                 handleInput={handleInput}
                 input={input}
@@ -56,7 +58,7 @@ export default function Search(props) {
            />
 
             {searchResults && <div>
-            <h4>Search results for "{input}"</h4>
+            <h4 className="listContainer__h4">Search results for "{lastSearch}"</h4>
                 <ul>
                 <SearchList 
                 searchResults={searchResults}
